@@ -23,8 +23,8 @@ f<-f[order(f[2],decreasing=TRUE),]
 f
 
 library(wordcloud2)
-f1<-f[1:80,]     
-wordcloud2(f, size = 0.8 ,shape='star')  
+f1<-f[1:50,]     
+wordcloud2(f, size = 0.5 ,shape='star')  
 
 ```
 
