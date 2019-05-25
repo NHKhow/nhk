@@ -1,8 +1,30 @@
 ---
 title: "5月22日 爬虫\U0001F41B练习"
-author: ''
+author: 'Chris'
 date: '2019-05-22'
 slug: 5月22日-爬虫-练习
 categories: []
 tags: []
 ---
+```{r}
+library(rvest)
+library(xml2)
+url<-'http://www.gov.cn/zhuanti/2018lh/2018zfgzbg/zfgzbg.htm'
+web<-read_html(url,encoding="utf-8")
+position<-web %>% html_nodes("div.event_box div p")%>%html_text()
+position 
+
+library(jiebaRD)
+library(jiebaR) 
+engine_s<-worker(stop_word="C://Users//Chris//OneDrive//-//百度停用词表.txt")
+seg<-segment(position,engine_s)
+f<-freq(seg)
+f<-f[order(f[2],decreasing=TRUE),]
+f
+
+library(wordcloud2)
+f1<-f[1:80,]     
+wordcloud2(f, size = 0.8 ,shape='star')  
+
+```
+
