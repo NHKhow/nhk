@@ -35,4 +35,4 @@ event<-c(x,y,z,f,g)
 patientdata<-data.frame(time,age,event)
 patientdata
 ```
-## 是不是有趣！！！
+### 是不是有趣！！！
