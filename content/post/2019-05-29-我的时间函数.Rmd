@@ -6,7 +6,7 @@ slug: 我的时间函数
 categories: []
 tags: []
 ---
-这是一个关于自己这二十年来成长的主要时间节点的时间函数！
+##这是一个关于自己这二十年来成长的主要时间节点的时间函数！
 ```{r}
 x<-Sys.Date()
 y<-as.Date("1999-05-017")
@@ -28,7 +28,7 @@ x<-as.character("我出生辽")
 y<-as.character("提前一年上小学")
 z<-as.character("因考双百有了自行车")
 f<-as.character("高考结束")
-g<-as.character("挂了微积分")
+g<-as.character("挂了微积分,人生失去色彩")
 time<-c(1999,2005,2006,2017,2018)
 age<-c(0,6,7,18,19)
 event<-c(x,y,z,f,g)
