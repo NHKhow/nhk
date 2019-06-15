@@ -18,8 +18,21 @@ y5<-as.Date("2006-4-23")
 y6<-as.numeric(format(y5,"%Y"))
 y7<-as.Date("2011-09-01")
 y8<-as.numeric(format(y7,"%Y"))
-y9<-as.Date("2014-09-01")
+y9<-as.Date("2018-07-01")
 y10<-as.numeric(format(y9,"%Y"))
 print(paste("今年我居然都",x1-y1,"岁了！开始奔三了！！"))
+```
+#然后来稍微梳理一下⑧
+```{r}
+x<-as.character("我出生辽")
+y<-as.character("提前一年上小学")
+z<-as.character("因考双百有了自行车")
+f<-as.character("高考结束")
+g<-as.character("挂了微积分")
+time<-c(1999,2005,2006,2017,2018)
+age<-c(0,6,7,18,19)
+event<-c(x,y,z,f,g)
+patientdata<-data.frame(time,age,event)
+patientdata
 ```
 
