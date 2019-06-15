@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Chris&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>我的时间函数</title>
+      <link>/2019/05/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/</guid>
+      <description>这是一个关于自己的成长时间节点函数啦！</description>
+    </item>
     
     <item>
       <title>5月22日 爬虫🐛练习</title>
