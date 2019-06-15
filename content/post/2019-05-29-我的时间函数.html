@@ -9,4 +9,18 @@ tags: []
 
 
 
-<p>这是一个关于自己的成长时间节点函数啦！</p>
+<p>这是一个关于自己这二十年来成长的主要时间节点的时间函数！</p>
+<pre class="r"><code>x&lt;-Sys.Date()
+y&lt;-as.Date(&quot;1999-05-017&quot;)
+x1&lt;-as.numeric(format(x,&quot;%Y&quot;))
+y1&lt;-as.numeric(format(y,&quot;%Y&quot;))
+y3&lt;-as.Date(&quot;2005-09-01&quot;)
+y4&lt;-as.numeric(format(y3,&quot;%Y&quot;))
+y5&lt;-as.Date(&quot;2006-4-23&quot;)
+y6&lt;-as.numeric(format(y5,&quot;%Y&quot;))
+y7&lt;-as.Date(&quot;2011-09-01&quot;)
+y8&lt;-as.numeric(format(y7,&quot;%Y&quot;))
+y9&lt;-as.Date(&quot;2014-09-01&quot;)
+y10&lt;-as.numeric(format(y9,&quot;%Y&quot;))
+print(paste(&quot;今年我&quot;,x1-y1,&quot;岁了&quot;))</code></pre>
+<pre><code>## [1] &quot;今年我 20 岁了&quot;</code></pre>

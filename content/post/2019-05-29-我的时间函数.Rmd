@@ -6,4 +6,20 @@ slug: 我的时间函数
 categories: []
 tags: []
 ---
-这是一个关于自己的成长时间节点函数啦！
+这是一个关于自己这二十年来成长的主要时间节点的时间函数！
+```{r}
+x<-Sys.Date()
+y<-as.Date("1999-05-017")
+x1<-as.numeric(format(x,"%Y"))
+y1<-as.numeric(format(y,"%Y"))
+y3<-as.Date("2005-09-01")
+y4<-as.numeric(format(y3,"%Y"))
+y5<-as.Date("2006-4-23")
+y6<-as.numeric(format(y5,"%Y"))
+y7<-as.Date("2011-09-01")
+y8<-as.numeric(format(y7,"%Y"))
+y9<-as.Date("2014-09-01")
+y10<-as.numeric(format(y9,"%Y"))
+print(paste("今年我",x1-y1,"岁了"))
+```
+

@@ -17,7 +17,8 @@
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/05/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/</guid>
-      <description>这是一个关于自己的成长时间节点函数啦！</description>
+      <description>这是一个关于自己这二十年来成长的主要时间节点的时间函数！
+x&amp;lt;-Sys.Date()y&amp;lt;-as.Date(&amp;quot;1999-05-017&amp;quot;)x1&amp;lt;-as.numeric(format(x,&amp;quot;%Y&amp;quot;))y1&amp;lt;-as.numeric(format(y,&amp;quot;%Y&amp;quot;))y3&amp;lt;-as.Date(&amp;quot;2005-09-01&amp;quot;)y4&amp;lt;-as.numeric(format(y3,&amp;quot;%Y&amp;quot;))y5&amp;lt;-as.Date(&amp;quot;2006-4-23&amp;quot;)y6&amp;lt;-as.numeric(format(y5,&amp;quot;%Y&amp;quot;))y7&amp;lt;-as.Date(&amp;quot;2011-09-01&amp;quot;)y8&amp;lt;-as.numeric(format(y7,&amp;quot;%Y&amp;quot;))y9&amp;lt;-as.Date(&amp;quot;2014-09-01&amp;quot;)y10&amp;lt;-as.numeric(format(y9,&amp;quot;%Y&amp;quot;))print(paste(&amp;quot;今年我&amp;quot;,x1-y1,&amp;quot;岁了&amp;quot;))## [1] &amp;quot;今年我 20 岁了&amp;quot;</description>
     </item>
     
     <item>
