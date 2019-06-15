@@ -6,7 +6,7 @@ slug: 我的时间函数
 categories: []
 tags: []
 ---
-##这是一个关于自己这二十年来成长的主要时间节点的时间函数！
+# 这是一个关于我这二十年来成长的主要时间节点的时间函数,给我看！！
 ```{r}
 x<-Sys.Date()
 y<-as.Date("1999-05-017")
@@ -22,7 +22,7 @@ y9<-as.Date("2018-07-01")
 y10<-as.numeric(format(y9,"%Y"))
 print(paste("今年我居然都",x1-y1,"岁了！开始奔三了！！"))
 ```
-#然后来稍微梳理一下⑧
+## 然后来稍微梳理一下⑧
 ```{r}
 x<-as.character("我出生辽")
 y<-as.character("提前一年上小学")
@@ -35,4 +35,4 @@ event<-c(x,y,z,f,g)
 patientdata<-data.frame(time,age,event)
 patientdata
 ```
-
+## 是不是有趣！！！
