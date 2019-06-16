@@ -1,8 +1,13 @@
 ---
-title: 6月4日 一组统计数据
+title: "6月4日 一组统计数据"
 author: ''
 date: '2019-06-04'
 slug: 6月4日-一组统计数据
-categories: []
 tags: []
+categories: []
 ---
+## 统计分析汽车行驶中每加仑油（约为2.8L）可行驶的里程数与汽缸数量的关系
+```{r}
+dotchart(mtcars$mpg,labels = row.names(mtcars),cex = .7, main = "汽车缸数耗油量",xlab = "英里/加仑")
+```
+
