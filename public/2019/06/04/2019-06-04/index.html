@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>6月4日 散点图练习 - Chris&#39;s blog</title>
+<meta property="og:title" content="6月4日 散点图练习 - Chris&#39;s blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/IMG_5499.jpg"
+         width="50"
+         height="50"
+         alt="logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://weibo.com/u/5961177287">Weibo</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">Welcome</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">6月4日 散点图练习</h1>
+
+    
+    <span class="article-date">2019-06-04</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div id="section" class="section level1">
+<h1>汽车每英里耗油量与发动机缸数的关系分析</h1>
+<p>mtcars包自带的数据里面有宝马、大众等汽车品牌高、中、低端的车型，其拥有的汽车缸数也不尽相同。下面对他们汽车缸数数量和每英里耗油量（加仑）进行初步统计分析：</p>
+<pre class="r"><code>dotchart(mtcars$mpg,labels = row.names(mtcars),cex = .7,
+         main = &quot;车型汽缸数耗油量散点图&quot;,
+         xlab = &quot;英里/加仑&quot;)</code></pre>
+<p><img src="/post/2019-06-04_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>由此我们得到了如上所示的散点图，但其还不够直观，希望这个图能够经过排序，想要按照油缸数（cyl）进行分组并且用不同的颜色显示，代码如下：</p>
+<pre class="r"><code>x &lt;- mtcars[order(mtcars$mpg),]       
+x$cyl &lt;-factor(x$cyl)     
+x$color[x$cyl==4] &lt;-&quot;red&quot;   
+x$color[x$cyl==6] &lt;-&quot;blue&quot;
+x$color[x$cyl==8] &lt;-&quot;darkgreen&quot;
+dotchart(x$mpg,     
+         labels = row.names(x), 
+         cex = .7,
+         groups = x$cyl,      
+         gcolor = &quot;black&quot;,    
+         color = x$color,     
+         pch = 19,
+         main = &quot;汽缸数车型分类散点图&quot;, 
+         xlab = &quot;英里/加仑&quot;)</code></pre>
+<p><img src="/post/2019-06-04_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>由图可见其将这些车型按拥有汽缸数分为了4缸、6缸和8缸三种类型，一般车型越高端汽缸数越多则耗油量就越大！</p>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

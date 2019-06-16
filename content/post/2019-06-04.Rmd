@@ -1,0 +1,38 @@
+---
+title: 6月4日 散点图练习
+author: ''
+date: '2019-06-04'
+slug: '2019-06-04'
+categories: []
+tags: []
+---
+# 汽车每英里耗油量与发动机缸数的关系分析
+
+mtcars包自带的数据里面有宝马、大众等汽车品牌高、中、低端的车型，其拥有的汽车缸数也不尽相同。下面对他们汽车缸数数量和每英里耗油量（加仑）进行初步统计分析：
+
+```{r}
+dotchart(mtcars$mpg,labels = row.names(mtcars),cex = .7,
+         main = "车型汽缸数耗油量散点图",
+         xlab = "英里/加仑")
+```
+
+由此我们得到了如上所示的散点图，但其还不够直观，希望这个图能够经过排序，想要按照油缸数（cyl）进行分组并且用不同的颜色显示，代码如下：
+
+```{r}
+x <- mtcars[order(mtcars$mpg),]       
+x$cyl <-factor(x$cyl)     
+x$color[x$cyl==4] <-"red"   
+x$color[x$cyl==6] <-"blue"
+x$color[x$cyl==8] <-"darkgreen"
+dotchart(x$mpg,     
+         labels = row.names(x), 
+         cex = .7,
+         groups = x$cyl,      
+         gcolor = "black",    
+         color = x$color,     
+         pch = 19,
+         main = "汽缸数车型分类散点图", 
+         xlab = "英里/加仑")
+```
+
+由图可见其将这些车型按拥有汽缸数分为了4缸、6缸和8缸三种类型，一般车型越高端汽缸数越多则耗油量就越大！

@@ -21,22 +21,14 @@
     </item>
     
     <item>
-      <title>6月7日 地图绘制</title>
-      <link>/2019/06/07/6%E6%9C%887%E6%97%A5-%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6/</link>
-      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/06/07/6%E6%9C%887%E6%97%A5-%E5%9C%B0%E5%9B%BE%E7%BB%98%E5%88%B6/</guid>
-      <description>美国各州谋杀率本部分为根据课上所讲绘制地图的方法
-</description>
-    </item>
-    
-    <item>
-      <title>6月4日 散点图绘制</title>
-      <link>/2019/06/04/6%E6%9C%884%E6%97%A5-%E6%95%A3%E7%82%B9%E5%9B%BE%E7%BB%98%E5%88%B6/</link>
+      <title>6月4日 散点图练习</title>
+      <link>/2019/06/04/2019-06-04/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/04/6%E6%9C%884%E6%97%A5-%E6%95%A3%E7%82%B9%E5%9B%BE%E7%BB%98%E5%88%B6/</guid>
-      <description>统计分析汽车行驶中每加仑油（约为2.8L）可行驶的里程数与汽缸数量的关系选择统计了丰田、大众、宝马等不同品牌的主要车型，以下为初步统计结果散点图（纵轴为车型及汽缸数量，横轴为每加仑油可行驶里程数）。
+      <guid>/2019/06/04/2019-06-04/</guid>
+      <description>汽车每英里耗油量与发动机缸数的关系分析mtcars包自带的数据里面有宝马、大众等汽车品牌高、中、低端的车型，其拥有的汽车缸数也不尽相同。下面对他们汽车缸数数量和每英里耗油量（加仑）进行初步统计分析：
+dotchart(mtcars$mpg,labels = row.names(mtcars),cex = .7,main = &amp;quot;车型汽缸数耗油量散点图&amp;quot;,xlab = &amp;quot;英里/加仑&amp;quot;)由此我们得到了如上所示的散点图，但其还不够直观，希望这个图能够经过排序，想要按照油缸数（cyl）进行分组并且用不同的颜色显示，代码如下：
+x &amp;lt;- mtcars[order(mtcars$mpg),] x$cyl &amp;lt;-factor(x$cyl) x$color[x$cyl==4] &amp;lt;-&amp;quot;red&amp;quot; x$color[x$cyl==6] &amp;lt;-&amp;quot;blue&amp;quot;x$color[x$cyl==8] &amp;lt;-&amp;quot;darkgreen&amp;quot;dotchart(x$mpg, labels = row.names(x), cex = .7,groups = x$cyl, gcolor = &amp;quot;black&amp;quot;, color = x$color, pch = 19,main = &amp;quot;汽缸数车型分类散点图&amp;quot;, xlab = &amp;quot;英里/加仑&amp;quot;)由图可见其将这些车型按拥有汽缸数分为了4缸、6缸和8缸三种类型，一般车型越高端汽缸数越多则耗油量就越大！
 </description>
     </item>
     
