@@ -17,7 +17,8 @@
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/15/%E6%89%8E%E5%BF%83%E9%AD%94%E4%BB%99%E6%8F%90%E9%86%92%E6%82%A8-%E4%BD%A0%E5%A4%8D%E4%B9%A0%E4%B8%8D%E5%AE%8C%E4%BA%86-%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0/</guid>
-      <description></description>
+      <description>这学期，在我自作孽的情况下给自己额外选了两门闭卷考试，所以总共就有三门，致使现在的我复习得崩溃。为了让自己清醒地意识到时间的紧迫性，来看一下各科还有多久就考试了🙄
+now&amp;lt;- Sys.Date()悲惨时间&amp;lt;- as.Date(&amp;quot;2019-06-23&amp;quot;) print(paste(&amp;quot;距离悲伤的毛概考试仅有&amp;quot;,悲惨时间-now,&amp;quot;天！我服了！&amp;quot;))## [1] &amp;quot;距离悲伤的毛概考试仅有 4 天！我服了！&amp;quot;</description>
     </item>
     
     <item>
