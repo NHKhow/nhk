@@ -1,0 +1,37 @@
+---
+title: 6月14日 ggplot画图练习
+author: ''
+date: '2019-06-28'
+slug: '2019-06-28'
+categories: []
+tags: []
+---
+# 地图绘制练习
+
+如下为世界地图：
+```{r}
+library(maps)
+map("world", fill = TRUE, col = rainbow(200),
+    ylim = c(-60, 90), mar = c(0, 0, 0, 0))
+title("世界地图")
+```
+
+```{r}
+library(maps)
+head(USArrests)
+```
+
+```{r}
+crimes <- data.frame(state=tolower(rownames(USArrests)), USArrests)
+head(crimes)
+```
+
+```{r}
+library(reshape2)
+crimesm <- melt(crimes, id=1)
+head(crimesm)
+```
+
+
+
+

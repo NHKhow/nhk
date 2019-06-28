@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>6月14日 ggplot画图练习 - Chris&#39;s blog</title>
+<meta property="og:title" content="6月14日 ggplot画图练习 - Chris&#39;s blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/IMG_5499.jpg"
+         width="50"
+         height="50"
+         alt="logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://weibo.com/u/5961177287">Weibo</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">Welcome</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">6月14日 ggplot画图练习</h1>
+
+    
+    <span class="article-date">2019-06-28</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div id="section" class="section level1">
+<h1>地图绘制练习</h1>
+<p>如下为世界地图：</p>
+<pre class="r"><code>library(maps)
+map(&quot;world&quot;, fill = TRUE, col = rainbow(200),
+    ylim = c(-60, 90), mar = c(0, 0, 0, 0))
+title(&quot;世界地图&quot;)</code></pre>
+<p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>library(maps)
+head(USArrests)</code></pre>
+<pre><code>##            Murder Assault UrbanPop Rape
+## Alabama      13.2     236       58 21.2
+## Alaska       10.0     263       48 44.5
+## Arizona       8.1     294       80 31.0
+## Arkansas      8.8     190       50 19.5
+## California    9.0     276       91 40.6
+## Colorado      7.9     204       78 38.7</code></pre>
+<pre class="r"><code>crimes &lt;- data.frame(state=tolower(rownames(USArrests)), USArrests)
+head(crimes)</code></pre>
+<pre><code>##                 state Murder Assault UrbanPop Rape
+## Alabama       alabama   13.2     236       58 21.2
+## Alaska         alaska   10.0     263       48 44.5
+## Arizona       arizona    8.1     294       80 31.0
+## Arkansas     arkansas    8.8     190       50 19.5
+## California california    9.0     276       91 40.6
+## Colorado     colorado    7.9     204       78 38.7</code></pre>
+<pre class="r"><code>library(reshape2)
+crimesm &lt;- melt(crimes, id=1)
+head(crimesm)</code></pre>
+<pre><code>##        state variable value
+## 1    alabama   Murder  13.2
+## 2     alaska   Murder  10.0
+## 3    arizona   Murder   8.1
+## 4   arkansas   Murder   8.8
+## 5 california   Murder   9.0
+## 6   colorado   Murder   7.9</code></pre>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+
