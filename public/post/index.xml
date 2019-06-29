@@ -6,20 +6,10 @@
     <description>Recent content in Posts on Chris&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>6月14日 ggplot画图练习</title>
-      <link>/2019/06/28/2019-06-28/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/06/28/2019-06-28/</guid>
-      <description>地图绘制练习如下为世界地图：
-library(maps)map(&amp;quot;world&amp;quot;, fill = TRUE, col = rainbow(200),ylim = c(-60, 90), mar = c(0, 0, 0, 0))title(&amp;quot;世界地图&amp;quot;)library(maps)head(USArrests)## Murder Assault UrbanPop Rape## Alabama 13.2 236 58 21.2## Alaska 10.0 263 48 44.5## Arizona 8.1 294 80 31.0## Arkansas 8.8 190 50 19.5## California 9.0 276 91 40.6## Colorado 7.9 204 78 38.7crimes &amp;lt;- data.frame(state=tolower(rownames(USArrests)), USArrests)head(crimes)## state Murder Assault UrbanPop Rape## Alabama alabama 13.</description>
-    </item>
     
     <item>
       <title>扎心魔仙提醒您：你复习不完了😊（时间函数）</title>
@@ -30,6 +20,16 @@ library(maps)map(&amp;quot;world&amp;quot;, fill = TRUE, col = rainbow(200),yl
       <description>慎选期末闭卷考试的科目！！！😭这学期，在我自作孽的情况下给自己额外选了两门闭卷考试，所以总共就有三门，致使现在的我复习得崩溃。为了让自己清醒地意识到时间的紧迫性，来看一下各科还有多久就考试了🙄
 now&amp;lt;- Sys.time()sadtime&amp;lt;- strptime (&amp;quot;2019-06-23 10:30:00&amp;quot;, format = &amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;)difftime(sadtime,now,units = &amp;quot;hours&amp;quot;)## Time difference of -120.186 hoursprint(paste(&amp;quot;距离悲伤的毛概考试仅有&amp;quot;,sadtime-now,&amp;quot;天，折合&amp;quot;,difftime(sadtime,now,units = &amp;quot;hours&amp;quot;),&amp;quot;小时&amp;quot;,difftime(sadtime,now,units = &amp;quot;mins&amp;quot;),&amp;quot;分钟&amp;quot;,difftime(sadtime,now, units = &amp;quot;secs&amp;quot;),&amp;quot;秒&amp;quot;))## [1] &amp;quot;距离悲伤的毛概考试仅有 -5.0077501369792 天，折合 -120.186003287501 小时 -7211.16019725005 分钟 -432669.611835003 秒&amp;quot;##下面是人类行为与社会环境：
 now&amp;lt;- Sys.time()sadtime&amp;lt;- strptime (&amp;quot;2019-06-25 14:30:00&amp;quot;, format = &amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;)difftime(sadtime,now,units = &amp;quot;hours&amp;quot;)## Time difference of -68.18604 hoursprint(paste(&amp;quot;距离选修的人类行为还有&amp;quot;,sadtime-now,&amp;quot;天，折合&amp;quot;,difftime(sadtime,now,units = &amp;quot;hours&amp;quot;),&amp;quot;小时&amp;quot;,difftime(sadtime,now,units = &amp;quot;mins&amp;quot;),&amp;quot;分钟&amp;quot;,difftime(sadtime,now, units = &amp;quot;secs&amp;quot;),&amp;quot;秒&amp;quot;))## [1] &amp;quot;距离选修的人类行为还有 -2.</description>
+    </item>
+    
+    <item>
+      <title>6月14日 ggplot画图练习</title>
+      <link>/2019/06/14/2019-06-14/</link>
+      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/14/2019-06-14/</guid>
+      <description>地图绘制练习如下为世界地图：
+library(maps)map(&amp;quot;world&amp;quot;, fill = TRUE, col = rainbow(200),ylim = c(-60, 90), mar = c(0, 0, 0, 0))title(&amp;quot;世界地图&amp;quot;)library(maps)head(USArrests)## Murder Assault UrbanPop Rape## Alabama 13.2 236 58 21.2## Alaska 10.0 263 48 44.5## Arizona 8.1 294 80 31.0## Arkansas 8.8 190 50 19.5## California 9.0 276 91 40.6## Colorado 7.9 204 78 38.7crimes &amp;lt;- data.frame(state=tolower(rownames(USArrests)), USArrests)head(crimes)## state Murder Assault UrbanPop Rape## Alabama alabama 13.</description>
     </item>
     
     <item>
