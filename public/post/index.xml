@@ -28,8 +28,7 @@ now&amp;lt;- Sys.time()sadtime&amp;lt;- strptime (&amp;quot;2019-06-25 14:30:00
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/14/2019-06-14/</guid>
-      <description>地图绘制练习如下为世界地图：
-library(maps)map(&amp;quot;world&amp;quot;, fill = TRUE, col = rainbow(200),ylim = c(-60, 90), mar = c(0, 0, 0, 0))title(&amp;quot;世界地图&amp;quot;)library(maps)head(USArrests)## Murder Assault UrbanPop Rape## Alabama 13.2 236 58 21.2## Alaska 10.0 263 48 44.5## Arizona 8.1 294 80 31.0## Arkansas 8.8 190 50 19.5## California 9.0 276 91 40.6## Colorado 7.9 204 78 38.7crimes &amp;lt;- data.frame(state=tolower(rownames(USArrests)), USArrests)head(crimes)## state Murder Assault UrbanPop Rape## Alabama alabama 13.</description>
+      <description>地图绘制练习世界地图的简单绘制：library(maps)map(&amp;quot;world&amp;quot;, fill = TRUE, col = rainbow(200),ylim = c(-60, 90), mar = c(0, 0, 0, 0))title(&amp;quot;世界地图&amp;quot;)中国地图的绘制：library(maps)library(mapdata)map(&amp;quot;china&amp;quot;)</description>
     </item>
     
     <item>

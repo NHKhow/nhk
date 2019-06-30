@@ -24,11 +24,12 @@ map("china")
 ```
 
 ```{r}
-library(ggmap)
-library(mapproj)
-map <- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
-ggmap(map)
+library(maptools)
+x <- readShapePoly('bou2_4p.shp')
+plot(x)
 ```
+
+
 
 
 

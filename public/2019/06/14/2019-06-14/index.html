@@ -77,40 +77,21 @@
 
 <div id="section" class="section level1">
 <h1>地图绘制练习</h1>
-<p>如下为世界地图：</p>
+<div id="section-1" class="section level2">
+<h2>世界地图的简单绘制：</h2>
 <pre class="r"><code>library(maps)
 map(&quot;world&quot;, fill = TRUE, col = rainbow(200),
     ylim = c(-60, 90), mar = c(0, 0, 0, 0))
 title(&quot;世界地图&quot;)</code></pre>
 <p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="section-2" class="section level2">
+<h2>中国地图的绘制：</h2>
 <pre class="r"><code>library(maps)
-head(USArrests)</code></pre>
-<pre><code>##            Murder Assault UrbanPop Rape
-## Alabama      13.2     236       58 21.2
-## Alaska       10.0     263       48 44.5
-## Arizona       8.1     294       80 31.0
-## Arkansas      8.8     190       50 19.5
-## California    9.0     276       91 40.6
-## Colorado      7.9     204       78 38.7</code></pre>
-<pre class="r"><code>crimes &lt;- data.frame(state=tolower(rownames(USArrests)), USArrests)
-head(crimes)</code></pre>
-<pre><code>##                 state Murder Assault UrbanPop Rape
-## Alabama       alabama   13.2     236       58 21.2
-## Alaska         alaska   10.0     263       48 44.5
-## Arizona       arizona    8.1     294       80 31.0
-## Arkansas     arkansas    8.8     190       50 19.5
-## California california    9.0     276       91 40.6
-## Colorado     colorado    7.9     204       78 38.7</code></pre>
-<pre class="r"><code>library(reshape2)
-crimesm &lt;- melt(crimes, id=1)
-head(crimesm)</code></pre>
-<pre><code>##        state variable value
-## 1    alabama   Murder  13.2
-## 2     alaska   Murder  10.0
-## 3    arizona   Murder   8.1
-## 4   arkansas   Murder   8.8
-## 5 california   Murder   9.0
-## 6   colorado   Murder   7.9</code></pre>
+library(mapdata)
+map(&quot;china&quot;)</code></pre>
+<p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
 </div>
 
     </div>
