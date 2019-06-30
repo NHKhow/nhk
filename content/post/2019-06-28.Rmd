@@ -23,10 +23,20 @@ library(mapdata)
 map("china")
 ```
 
+## 美国地图的绘制
 ```{r}
-library(maptools)
-x <- readShapePoly('bou2_4p.shp')
-plot(x)
+library(maps)
+map("state", fill = TRUE, col = rainbow(209),
+    mar = c(0, 0, 2, 0))
+title("美国地图")
+```
+
+美国三州地图：
+```{r}
+library(maps)
+map('state', region = c('new york', 'new jersey', 'penn'),
+    fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 5))
+title("纽约、新泽西和滨州地图")
 ```
 
 
