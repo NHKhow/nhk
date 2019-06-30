@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>6月17日 ggplot地图练习2.0 - Chris&#39;s blog</title>
+<meta property="og:title" content="6月17日 ggplot地图练习2.0 - Chris&#39;s blog">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/IMG_5499.jpg"
+         width="50"
+         height="50"
+         alt="logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://weibo.com/u/5961177287">Weibo</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">Welcome</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">6月17日 ggplot地图练习2.0</h1>
+
+    
+    <span class="article-date">2019-06-17</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div id="section" class="section level2">
+<h2>绘制世界城市散点图</h2>
+<pre class="r"><code>library(maps)
+library(ggplot2)
+data(world.cities);
+head(world.cities)</code></pre>
+<pre><code>##                 name country.etc   pop   lat  long capital
+## 1 &#39;Abasan al-Jadidah   Palestine  5629 31.31 34.34       0
+## 2 &#39;Abasan al-Kabirah   Palestine 18999 31.32 34.35       0
+## 3       &#39;Abdul Hakim    Pakistan 47788 30.55 72.11       0
+## 4 &#39;Abdullah-as-Salam      Kuwait 21817 29.36 47.98       0
+## 5              &#39;Abud   Palestine  2456 32.03 35.07       0
+## 6            &#39;Abwein   Palestine  3434 32.03 35.20       0</code></pre>
+<pre class="r"><code>qplot(long, lat, data = world.cities ) + borders(&quot;world&quot;, size = 0.5)</code></pre>
+<p><img src="/post/2019-06-17_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="section-1" class="section level2">
+<h2>绘制美国城市散点图</h2>
+<p>us.cities数据可以绘制美国地图:</p>
+<pre class="r"><code>data(us.cities);head(us.cities)</code></pre>
+<pre><code>##         name country.etc    pop   lat    long capital
+## 1 Abilene TX          TX 113888 32.45  -99.74       0
+## 2   Akron OH          OH 206634 41.08  -81.52       0
+## 3 Alameda CA          CA  70069 37.77 -122.26       0
+## 4  Albany GA          GA  75510 31.58  -84.18       0
+## 5  Albany NY          NY  93576 42.67  -73.80       2
+## 6  Albany OR          OR  45535 44.62 -123.09       0</code></pre>
+<pre class="r"><code>qplot(long, lat, data = us.cities) + borders(&quot;state&quot;, size = 0.5)</code></pre>
+<p><img src="/post/2019-06-17_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="section-2" class="section level2">
+<h2>绘制中国城市散点图</h2>
+<pre class="r"><code>China&lt;- subset(world.cities, country.etc == &quot;China&quot;)
+ggplot(China, aes(long, lat)) +
+geom_point(colour = alpha(&quot;red&quot;, 1))</code></pre>
+<p><img src="/post/2019-06-17_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

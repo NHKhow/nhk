@@ -1,0 +1,55 @@
+---
+title: 6月17日 ggplot地图练习2.0
+author: ''
+date: '2019-06-17'
+slug: '2019-06-17'
+categories: []
+tags: []
+---
+## 绘制世界城市散点图
+```{r}
+library(maps)
+library(ggplot2)
+data(world.cities);
+head(world.cities)
+qplot(long, lat, data = world.cities ) + borders("world", size = 0.5)
+```
+
+## 绘制美国城市散点图
+us.cities数据可以绘制美国地图:
+
+```{r}
+data(us.cities);head(us.cities)
+qplot(long, lat, data = us.cities) + borders("state", size = 0.5)
+```
+
+## 绘制中国大陆城市散点图
+```{r}
+China<- subset(world.cities, country.etc == "China")
+ggplot(China, aes(long, lat)) +
+geom_point(colour = alpha("blue", 1))
+```
+
+由此可以看到我国城市主要分在大部沿海和中部地区。
+
+## 为城市添加名称
+```{r}
+ggplot(China, aes(long, lat)) +
+geom_text(aes(label = name), data =China,size =3, angle = 0)
+```
+
+## 我国人口密度边界图
+
+通过borders函数进行操作：
+
+```{r}
+summary(China)
+ggplot(China, aes(long, lat)) +
+borders("world",xlim = c(75.97,132.19), 
+ylim = c(18.23,52.34),size=0.5, colour = "grey20")+
+  geom_point(aes(size = pop),colour = "blue",alpha=0.05)+
+  scale_size_area() +
+  coord_quickmap()
+```
+
+这个颜色是不是有点美丽呢？嘻嘻😄

@@ -92,6 +92,20 @@ library(mapdata)
 map(&quot;china&quot;)</code></pre>
 <p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
+<div id="section-3" class="section level2">
+<h2>美国地图的绘制</h2>
+<pre class="r"><code>library(maps)
+map(&quot;state&quot;, fill = TRUE, col = rainbow(209),
+    mar = c(0, 0, 2, 0))
+title(&quot;美国地图&quot;)</code></pre>
+<p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>美国三州地图：</p>
+<pre class="r"><code>library(maps)
+map(&#39;state&#39;, region = c(&#39;new york&#39;, &#39;new jersey&#39;, &#39;penn&#39;),
+    fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 5))
+title(&quot;纽约、新泽西和滨州地图&quot;)</code></pre>
+<p><img src="/post/2019-06-28_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
 </div>
 
     </div>
