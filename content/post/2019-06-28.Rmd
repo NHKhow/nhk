@@ -8,7 +8,7 @@ tags: []
 ---
 # 地图绘制练习
 
-如下为世界地图：
+## 世界地图的简单绘制：
 ```{r}
 library(maps)
 map("world", fill = TRUE, col = rainbow(200),
@@ -16,21 +16,22 @@ map("world", fill = TRUE, col = rainbow(200),
 title("世界地图")
 ```
 
+## 中国地图的绘制：
 ```{r}
 library(maps)
-head(USArrests)
+library(mapdata)
+map("china")
 ```
 
 ```{r}
-crimes <- data.frame(state=tolower(rownames(USArrests)), USArrests)
-head(crimes)
+library(ggmap)
+library(mapproj)
+map <- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
+ggmap(map)
 ```
 
-```{r}
-library(reshape2)
-crimesm <- melt(crimes, id=1)
-head(crimesm)
-```
+
+
 
 
 
